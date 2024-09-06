@@ -25,7 +25,6 @@ p {
 }
 
 a {
-
     color: #B1B1B1;
 }
 
@@ -35,7 +34,8 @@ a {
     background-image: linear-gradient(#009688, #DADBD4);
 }
 
-header a {
+header a,
+.input-group a {
     text-decoration: none;
 }
 
@@ -56,6 +56,11 @@ header a {
     height: 50px;
     width: 50px;
     color: #8EDAFC;
+}
+
+/*search*/
+.input-group {
+    background-color: #FAFAFA;
 }
 
 /*Contact*/
