@@ -33,7 +33,20 @@
             <div id="sidebar" class="brd d-flex flex-column">
 
                 <!--Header sidebar-->
-                <header class="brd">Sofia</header>
+                <header class="d-flex justify-content-between ">
+                    <!--my info-->
+                    <div id="my-avatar">
+                        <img src="img/avatar_io.png" alt="my avatar" class="p-2">
+                        <span class="fw-semibold">Sofia</span>
+                    </div>
+
+                    <!--my link-->
+                    <ul id="my-link" class="m-0 pe-3 d-flex align-items-center gap-3 fs-5">
+                        <li><i class="fa-solid fa-circle-notch"></i></li>
+                        <li><i class="fa-solid fa-message"></i></li>
+                        <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                    </ul>
+                </header>
 
                 <!--notify desktop-->
                 <div class="notify brd">ricevi notifiche</div>
@@ -45,17 +58,19 @@
                         aria-describedby="basic-addon1">
                 </div>
 
-
+                <!--list contacts-->
                 <div id="contacts" class="overflow-auto flex-grow-1">
                     <ul class="contact overflow-auto p-0 m-0">
+
+                        <!--Contact-->
                         <li v-for="contact in contacts">
                             <!--avatar contact-->
-                            <img :src="contact.avatar" alt="contact[index].name">
+                            <img :src="contact.avatar" :alt="contact.name">
 
                             <!--info contact-->
-                            <div id="info-contact" class="h-50 w-100 p-2">
-                                <div class="d-flex justify-content-between">
-                                    <span class="fw-semibold">{{contact.name}}</span>
+                            <div id="info-contact">
+                                <div>
+                                    <span>{{contact.name}}</span>
                                     <p>12.00</p>
                                 </div>
                                 <p class="last-mex">ultimo messaggio inviato</p>
