@@ -48,118 +48,14 @@
 
                 <div id="contacts" class="overflow-auto flex-grow-1">
                     <ul class="contact overflow-auto p-0 m-0">
-                        <li>
+                        <li v-for="contact in contacts">
                             <!--avatar contact-->
-                            <img src="img/avatar_1.png" alt="michele">
+                            <img :src="contact.avatar" alt="contact[index].name">
 
                             <!--info contact-->
                             <div id="info-contact" class="h-50 w-100 p-2">
                                 <div class="d-flex justify-content-between">
-                                    <span class="fw-semibold">Michele</span>
-                                    <p>12.00</p>
-                                </div>
-                                <p class="last-mex">ultimo messaggio inviato</p>
-                            </div>
-                        </li>
-                        <li>
-                            <!--avatar contact-->
-                            <img src="img/avatar_1.png" alt="michele">
-
-                            <!--info contact-->
-                            <div id="info-contact" class="h-50 w-100 p-2">
-                                <div class="d-flex justify-content-between">
-                                    <span class="fw-semibold">Michele</span>
-                                    <p>12.00</p>
-                                </div>
-                                <p class="last-mex">ultimo messaggio inviato</p>
-                            </div>
-                        </li>
-                        <li>
-                            <!--avatar contact-->
-                            <img src="img/avatar_1.png" alt="michele">
-
-                            <!--info contact-->
-                            <div id="info-contact" class="h-50 w-100 p-2">
-                                <div class="d-flex justify-content-between">
-                                    <span class="fw-semibold">Michele</span>
-                                    <p>12.00</p>
-                                </div>
-                                <p class="last-mex">ultimo messaggio inviato</p>
-                            </div>
-                        </li>
-                        <li>
-                            <!--avatar contact-->
-                            <img src="img/avatar_1.png" alt="michele">
-
-                            <!--info contact-->
-                            <div id="info-contact" class="h-50 w-100 p-2">
-                                <div class="d-flex justify-content-between">
-                                    <span class="fw-semibold">Michele</span>
-                                    <p>12.00</p>
-                                </div>
-                                <p class="last-mex">ultimo messaggio inviato</p>
-                            </div>
-                        </li>
-                        <li>
-                            <!--avatar contact-->
-                            <img src="img/avatar_1.png" alt="michele">
-
-                            <!--info contact-->
-                            <div id="info-contact" class="h-50 w-100 p-2">
-                                <div class="d-flex justify-content-between">
-                                    <span class="fw-semibold">Michele</span>
-                                    <p>12.00</p>
-                                </div>
-                                <p class="last-mex">ultimo messaggio inviato</p>
-                            </div>
-                        </li>
-                        <li>
-                            <!--avatar contact-->
-                            <img src="img/avatar_1.png" alt="michele">
-
-                            <!--info contact-->
-                            <div id="info-contact" class="h-50 w-100 p-2">
-                                <div class="d-flex justify-content-between">
-                                    <span class="fw-semibold">Michele</span>
-                                    <p>12.00</p>
-                                </div>
-                                <p class="last-mex">ultimo messaggio inviato</p>
-                            </div>
-                        </li>
-                        <li>
-                            <!--avatar contact-->
-                            <img src="img/avatar_1.png" alt="michele">
-
-                            <!--info contact-->
-                            <div id="info-contact" class="h-50 w-100 p-2">
-                                <div class="d-flex justify-content-between">
-                                    <span class="fw-semibold">Michele</span>
-                                    <p>12.00</p>
-                                </div>
-                                <p class="last-mex">ultimo messaggio inviato</p>
-                            </div>
-                        </li>
-                        <li>
-                            <!--avatar contact-->
-                            <img src="img/avatar_1.png" alt="michele">
-
-                            <!--info contact-->
-                            <div id="info-contact" class="h-50 w-100 p-2">
-                                <div class="d-flex justify-content-between">
-                                    <span class="fw-semibold">Michele</span>
-                                    <p>12.00</p>
-                                </div>
-                                <p class="last-mex">ultimo messaggio inviato</p>
-                            </div>
-                        </li>
-                        <li>
-                            <!--avatar contact-->
-                            <img src="img/avatar_1.png" alt="michele">
-
-                            <!--info contact-->
-                            <div id="info-contact" class="h-50 w-100 p-2">
-                                <div class="d-flex justify-content-between">
-                                    <span class="fw-semibold">Michele</span>
+                                    <span class="fw-semibold">{{contact.name}}</span>
                                     <p>12.00</p>
                                 </div>
                                 <p class="last-mex">ultimo messaggio inviato</p>
