@@ -1,6 +1,7 @@
 /*General*/
-header {
-    height: 80px;
+header,
+footer {
+    height: 70px;
     background-color: #EAEAEA;
 }
 
@@ -36,7 +37,8 @@ a,
 }
 
 header a,
-.input-group a {
+.input-group a,
+footer a {
     text-decoration: none;
 }
 
@@ -102,7 +104,21 @@ header a,
 
 /*main content*/
 #main-content {
-    flex-grow: 1;
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*chat*/
+#chat {
+    padding: 0 60px;
+    background-image: url(../img/mine.png);
+}
+
+/*footer*/
+footer div {
+    padding: 20px 40px;
+    font-size: 25px;
 }
 
 /*! To Remove*/
