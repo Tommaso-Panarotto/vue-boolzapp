@@ -11,7 +11,6 @@ ul {
 }
 
 img {
-    height: 70%;
     border-radius: 100%;
 }
 
@@ -33,11 +32,24 @@ p {
 }
 
 #contacts li {
-    height: 120px;
     background-color: white;
     padding-left: 25px;
     display: flex;
-    align-items: center;
+    border-bottom: 1px solid #E9EBEB;
+}
+
+#contacts li:hover {
+    background-color: #E9EBEB;
+}
+
+#contacts img {
+    height: 90px;
+    padding: 10px 0;
+}
+
+#info-contact p {
+    font-size: 14px;
+    color: #D7D7D7;
 }
 
 /*main content*/
