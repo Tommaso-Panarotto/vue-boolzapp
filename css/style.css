@@ -111,13 +111,14 @@ footer a {
 
 /*chat*/
 #chat {
-    padding: 20px 60px;
+    padding: 20px 150px;
     background-image: url(../img/mine.png);
 }
 
 #chat li {
+    width: fit-content;
     max-width: 70%;
-    padding: 5px;
+    padding: 10px;
 
 }
 
@@ -143,9 +144,4 @@ footer div {
 .contact-mex {
     border-radius: 15px 15px 15px 0;
     background-color: white;
-}
-
-/*! To Remove*/
-.brd {
-    border: 1px dashed black;
 }

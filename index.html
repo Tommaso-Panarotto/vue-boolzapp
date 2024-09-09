@@ -112,53 +112,13 @@
                 <!--active chat-->
                 <div id="chat" class="flex-grow-1 overflow-auto">
                     <ul class="d-flex flex-column gap-3">
-                        <li class="my-mex">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
-                            assumenda, adipisci
-                            cupiditate et architecto, eius nemo vitae dolores blanditiis velit nesciunt tempora
-                            doloribus deleniti, non maiores rerum totam facilis illum.
-                            <div class="mex-time">28/03/2020 10:10:40</div>
-                        </li>
-                        <li class="contact-mex">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
-                            assumenda, adipisci
-                            cupiditate et architecto, eius nemo vitae dolores blanditiis velit nesciunt tempora
-                            doloribus deleniti, non maiores rerum totam facilis illum. lore
-                            <div class="mex-time">28/03/2020 10:10:40</div>
-                        </li>
-                        <li class="my-mex">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
-                            assumenda, adipisci
-                            cupiditate et architecto, eius nemo vitae dolores blanditiis velit nesciunt tempora
-                            doloribus deleniti, non maiores rerum totam facilis illum.
-                            <div class="mex-time">28/03/2020 10:10:40</div>
-                        </li>
-                        <li class="contact-mex">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
-                            assumenda, adipisci
-                            cupiditate et architecto, eius nemo vitae dolores blanditiis velit nesciunt tempora
-                            doloribus deleniti, non maiores rerum totam facilis illum. lore
-                            <div class="mex-time">28/03/2020 10:10:40</div>
-                        </li>
-                        <li class="my-mex">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
-                            assumenda, adipisci
-                            cupiditate et architecto, eius nemo vitae dolores blanditiis velit nesciunt tempora
-                            doloribus deleniti, non maiores rerum totam facilis illum.
-                            <div class="mex-time">28/03/2020 10:10:40</div>
-                        </li>
-                        <li class="contact-mex">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
-                            assumenda, adipisci
-                            cupiditate et architecto, eius nemo vitae dolores blanditiis velit nesciunt tempora
-                            doloribus deleniti, non maiores rerum totam facilis illum. lore
-                            <div class="mex-time">28/03/2020 10:10:40</div>
-                        </li>
-                        <li class="my-mex">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
-                            assumenda, adipisci
-                            cupiditate et architecto, eius nemo vitae dolores blanditiis velit nesciunt tempora
-                            doloribus deleniti, non maiores rerum totam facilis illum.
-                            <div class="mex-time">28/03/2020 10:10:40</div>
-                        </li>
-                        <li class="contact-mex">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
-                            assumenda, adipisci
-                            cupiditate et architecto, eius nemo vitae dolores blanditiis velit nesciunt tempora
-                            doloribus deleniti, non maiores rerum totam facilis illum. lore
-                            <div class="mex-time">28/03/2020 10:10:40</div>
+                        <li :class="(mex.status==='received')?'contact-mex':'my-mex'"
+                            v-for="(mex,index) in contacts[activeIndex].messages">
+                            <div>
+                                {{mex.message}}
+                                <i class="fa-solid fa-chevron-down d-none"></i>
+                            </div>
+                            <div class="mex-time">{{mex.date}}</div>
                         </li>
                     </ul>
                 </div>
