@@ -67,7 +67,6 @@
                         @keyup="isNamePresent()">
                 </div>
 
-
                 <!--list contacts-->
                 <div id="contacts" class="overflow-auto flex-grow-1 bg-white">
                     <ul class="contact overflow-auto p-0 m-0">
@@ -100,7 +99,7 @@
                     <div id="chat-avatar" class="d-flex align-items-center">
                         <img :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex].name" class="p-2">
                         <div><span>{{contacts[activeIndex].name}}</span>
-                            <p>ultimo messaggio inviato il
+                            <p v-if="contacts[activeIndex].messages.length >=1">ultimo messaggio inviato il
                                 {{contacts[activeIndex].messages[contacts[activeIndex].messages.length -1].date}} </p>
                         </div>
                     </div>
@@ -116,13 +115,19 @@
                 <!--active chat-->
                 <div id="chat" class="flex-grow-1 overflow-auto">
                     <ul class="d-flex flex-column gap-3">
-                        <li :class="(mex.status==='received')?'contact-mex':'my-mex'"
-                            v-for="(mex,index) in contacts[activeIndex].messages">
+                        <li data-bs-toggle="dropdown" aria-expanded="false"
+                            :class="(mex.status==='received')?'contact-mex':'my-mex'"
+                            v-for="(mex,index) in contacts[activeIndex].messages" @click="mexIndex=index">
                             <div>
                                 {{mex.message}}
                                 <i class="fa-solid fa-chevron-down d-none"></i>
                             </div>
                             <div class="mex-time">{{mex.date}}</div>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">Message info</button></li>
+                                <li><button class="dropdown-item" type="button" @click="deleteAMessage(mexIndex)">Delete
+                                        Message</button></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -143,6 +148,10 @@
 
     <!--JS-->
     <script src="js/script.js"></script>
+    <!--Bootstarpa JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

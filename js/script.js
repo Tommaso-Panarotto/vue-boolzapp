@@ -5,6 +5,7 @@ createApp({
     data() {
         return {
             activeIndex: 0,
+            mexIndex: 0,
             newTextSent: '',
             searchAName: '',
             contacts: [
@@ -196,6 +197,9 @@ createApp({
                     this.contacts[i].visible = false;
                 }
             }
+        },
+        deleteAMessage(mexIndex) {
+            this.contacts[this.activeIndex].messages.splice(mexIndex, 1);
         }
     }
 }).mount('#app')
