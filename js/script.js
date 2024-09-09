@@ -6,6 +6,7 @@ createApp({
         return {
             activeIndex: 0,
             newTextSent: '',
+            searchAName: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -183,6 +184,17 @@ createApp({
             if (content.length >= 3) {
                 this.contacts[this.activeIndex].messages.push({ date: '11.59', message: this.newTextSent, status: 'sent' });
                 this.newTextSent = '';
+            }
+        },
+        isNamePresent() {
+            for (let i = 0; i < this.contacts.length; i++) {
+                const nameUpperCase = this.contacts[i].name.toUpperCase();
+                const searchUpperCase = this.searchAName.toUpperCase();
+                if (nameUpperCase.match(searchUpperCase)) {
+                    this.contacts[i].visible = true;
+                } else {
+                    this.contacts[i].visible = false;
+                }
             }
         }
     }

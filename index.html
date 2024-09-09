@@ -63,15 +63,18 @@
                     <span class="input-group-text bg-white px-4" id="basic-addon1"><a href="#"
                             class="fa-solid fa-magnifying-glass"></a></span>
                     <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
-                        aria-label="Username" aria-describedby="basic-addon1">
+                        aria-label="Username" aria-describedby="basic-addon1" v-model="searchAName"
+                        @keyup="isNamePresent()">
                 </div>
 
+
                 <!--list contacts-->
-                <div id="contacts" class="overflow-auto flex-grow-1">
+                <div id="contacts" class="overflow-auto flex-grow-1 bg-white">
                     <ul class="contact overflow-auto p-0 m-0">
 
                         <!--Contact-->
-                        <li v-for="(contact,index) in contacts" @click="activeIndex=index">
+                        <li v-for="(contact,index) in contacts" @click="activeIndex=index"
+                            :class="(contacts[index].visible === false)?'d-none':''">
                             <!--avatar contact-->
                             <img :src="contact.avatar" :alt="contact.name">
 
