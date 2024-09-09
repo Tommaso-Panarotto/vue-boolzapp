@@ -128,7 +128,7 @@
                 <footer class="d-flex align-items-center">
                     <div class="emiticon"><a href="#" class="fa-regular fa-face-smile"></a></div>
                     <input type="text" placeholder="Scrivi un messaggio" class="m-3 p-2 flex-grow-1 border-0 rounded-2"
-                        v-model="newTextSent" @keyup.enter="sendAMessage(newTextSent)">
+                        v-model="newTextSent" @keyup.enter="sendAMessage(newTextSent),receiveAnAnswer()">
                     <div class=" audio"><a href="#" class="fa-solid fa-microphone"></a>
                     </div>
                 </footer>

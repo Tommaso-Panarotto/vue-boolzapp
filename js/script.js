@@ -173,6 +173,12 @@ createApp({
         }
     },
     methods: {
+        sendAnAnswer() {
+            this.contacts[this.activeIndex].messages.push({ date: '13.00', message: 'Oks', status: 'received' });
+        },
+        receiveAnAnswer() {
+            setTimeout(() => { this.sendAnAnswer() }, 1000);
+        },
         sendAMessage(content) {
             if (content.length >= 3) {
                 this.contacts[this.activeIndex].messages.push({ date: '11.59', message: this.newTextSent, status: 'sent' });
