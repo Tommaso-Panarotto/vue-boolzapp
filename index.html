@@ -71,7 +71,7 @@
                     <ul class="contact overflow-auto p-0 m-0">
 
                         <!--Contact-->
-                        <li v-for="contact in contacts">
+                        <li v-for="(contact,index) in contacts" @click="activeIndex=index">
                             <!--avatar contact-->
                             <img :src="contact.avatar" :alt="contact.name">
 
@@ -93,11 +93,12 @@
 
                 <!--header main content-->
                 <header class="d-flex justify-content-between ">
-                    <!--my info-->
+                    <!--chat info-->
                     <div id="chat-avatar" class="d-flex align-items-center">
-                        <img src="img/avatar_1.png" alt="my avatar" class="p-2">
-                        <div><span>Michele</span>
-                            <p>ultimo messaggio inviato alle </p>
+                        <img :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex].name" class="p-2">
+                        <div><span>{{contacts[activeIndex].name}}</span>
+                            <p>ultimo messaggio inviato il
+                                {{contacts[activeIndex].messages[contacts[activeIndex].messages.length -1].date}} </p>
                         </div>
                     </div>
 
