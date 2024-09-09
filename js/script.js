@@ -2,7 +2,7 @@
 const { createApp } = Vue
 
 const DateTime = luxon.DateTime;
-const dt = DateTime.now();
+let now = DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss');
 
 createApp({
     data() {
@@ -180,21 +180,15 @@ createApp({
         }
     },
     methods: {
-        getTime() {
-            this.timeMex = `${dt.day}/${dt.month}/${dt.year} ${dt.hour}:${dt.minute}:${dt.second}`
-        },
         sendAnAnswer() {
-            this.getTime();
-            this.hour = `${dt.hour}:${dt.minute}`
-            this.contacts[this.activeIndex].messages.push({ date: this.timeMex, message: 'Oks', status: 'received' });
+            this.contacts[this.activeIndex].messages.push({ date: now, message: 'Oks', status: 'received' });
         },
         receiveAnAnswer() {
             setTimeout(() => { this.sendAnAnswer() }, 1000);
         },
         sendAMessage(content) {
-            this.getTime();
             if (content.length >= 2) {
-                this.contacts[this.activeIndex].messages.push({ date: this.timeMex, message: this.newTextSent, status: 'sent' });
+                this.contacts[this.activeIndex].messages.push({ date: now, message: this.newTextSent, status: 'sent' });
                 this.newTextSent = '';
                 this.receiveAnAnswer();
             }
