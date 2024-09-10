@@ -1,8 +1,12 @@
 /*General*/
+body {
+    font-family: "Lato", sans-serif;
+}
+
 header,
 footer {
-    height: 70px;
-    background-color: #EAEAEA;
+    height: var(--xl);
+    background-color: var(--grey-bar);
 }
 
 main {
@@ -27,7 +31,7 @@ p {
 
 a,
 #chat-avatar p {
-    color: #B1B1B1;
+    color: var(--lightgrey);
 }
 
 /*APP*/
@@ -51,42 +55,42 @@ footer a {
 .bell,
 .input-group-text,
 #contacts {
-    background-color: white;
+    background-color: var(--bg-white);
 }
 
 #my-avatar img,
 .input-group {
-    padding: 10px;
+    padding: var(--xxs);
 }
 
 /*notify*/
 .notify {
     padding: 10px 0;
-    padding-left: 30px;
-    background-color: #8EDAFC;
+    padding-left: var(--m);
+    background-color: var(--azul);
 }
 
 .notify .bell {
-    height: 50px;
-    width: 50px;
-    color: #8EDAFC;
+    height: var(--l);
+    width: var(--l);
+    color: var(--azul);
 }
 
 /*search*/
 .input-group {
-    background-color: #FAFAFA;
+    background-color: var(--grey-bar);
 }
 
 /*Contact*/
 #contacts li {
-    background-color: white;
-    padding-left: 25px;
+    background-color: var(--bg-white);
+    padding-left: var(--s);
     display: flex;
-    border-bottom: 1px solid #E9EBEB;
+    border-bottom: 1px solid var(--grey-contact);
 }
 
 #contacts li:hover {
-    background-color: #E9EBEB;
+    background-color: var(--grey-contact);
 }
 
 #contacts img {
@@ -109,8 +113,8 @@ footer a {
 }
 
 #info-contact p {
-    font-size: 14px;
-    color: #D7D7D7;
+    font-size: var(--xs);
+    color: var(--lightgrey);
 }
 
 /*main content*/
@@ -129,7 +133,7 @@ footer a {
 #chat li {
     width: fit-content;
     max-width: 70%;
-    padding: 10px;
+    padding: var(--xxs);
     position: relative;
 
 }
@@ -137,7 +141,7 @@ footer a {
 #chat li:hover i {
     display: inline-block !important;
     position: absolute;
-    color: gray;
+    color: var(--lightgrey);
     top: 20%;
     right: 5%;
     border-radius: 50%;
@@ -145,27 +149,27 @@ footer a {
 }
 
 .mex-time {
-    font-size: 12px;
-    color: #B1B1B1;
+    font-size: var(--xxs);
+    color: var(--lightgrey);
     text-align: end;
 }
 
 /*footer*/
 footer div {
     padding: 20px 40px;
-    font-size: 25px;
+    font-size: var(--s);
 }
 
 /*Utils*/
 .sent {
     border-radius: 15px 15px 0 15px;
-    background-color: #D5F9BA;
+    background-color: var(--green-sent);
     align-self: flex-end;
 }
 
 .received {
     border-radius: 15px 15px 15px 0;
-    background-color: white;
+    background-color: var(--bg-white);
 }
 
 .flex-items-center {

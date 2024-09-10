@@ -1,0 +1,18 @@
+/* Custom Properties */
+:root {
+    /*Colors and BGColors*/
+    --bg-white: #FFF;
+    --azul: #8EDAFC;
+    --grey-contact: #E9EBEB;
+    --green-sent: #D5F9BA;
+    --grey-bar: #EAEAEA;
+    --lightgrey: #B1B1B1;
+
+    /*Size*/
+    --xxs: 10px;
+    --xs: 15px;
+    --s: 25px;
+    --m: 30px;
+    --l: 50px;
+    --xl: 70px;
+}
