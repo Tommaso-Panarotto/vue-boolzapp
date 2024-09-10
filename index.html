@@ -36,7 +36,7 @@
                 <header class="flex-between">
                     <!--my info-->
                     <div id="my-avatar">
-                        <img src="img/avatar_io.png" alt="my avatar" class="p-2">
+                        <img src="img/avatar_io.png" alt="my avatar">
                         <span class="fw-semibold">Sofia</span>
                     </div>
 
@@ -50,7 +50,7 @@
 
                 <!--notify desktop-->
                 <div class="notify d-flex">
-                    <div class="bell bg-white rounded-circle flex-items-center justify-content-center"><i
+                    <div class="bell rounded-circle flex-items-center justify-content-center"><i
                             class="fa-solid fa-bell-slash fs-3"></i></div>
                     <div class="ps-2">
                         <p class="fw-semibold">Ricevi notifiche di nuovi messaggi</p>
@@ -59,8 +59,8 @@
                 </div>
 
                 <!--search contact-->
-                <div class="input-group p-2">
-                    <span class="input-group-text bg-white px-4" id="basic-addon1"><a href="#"
+                <div class="input-group">
+                    <span class="input-group-text px-4" id="basic-addon1"><a href="#"
                             class="fa-solid fa-magnifying-glass"></a></span>
                     <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
                         aria-label="Username" aria-describedby="basic-addon1" v-model="searchAName"
@@ -68,12 +68,12 @@
                 </div>
 
                 <!--list contacts-->
-                <div id="contacts" class="overflow-auto flex-grow-1 bg-white">
+                <div id="contacts" class="overflow-auto flex-grow-1">
                     <ul class="contact overflow-auto p-0 m-0">
 
                         <!--Contact-->
                         <li v-for="(contact,index) in contacts" @click="activeIndex=index"
-                            :class="(contacts[index].visible === false)?'d-none':''">
+                            :class="!(contacts[index].visible)?'d-none':''">
                             <!--avatar contact-->
                             <img :src="contact.avatar" :alt="contact.name">
 
@@ -81,9 +81,10 @@
                             <div id="info-contact">
                                 <div>
                                     <span>{{contact.name}}</span>
-                                    <p>{{contacts[index].messages[contacts[index].messages.length-1].date}}</p>
+                                    <p v-if="contacts[index].messages.length >=1">
+                                        {{contacts[index].messages[contacts[index].messages.length-1].date}}</p>
                                 </div>
-                                <p class="last-mex">
+                                <p class="last-mex" v-if="contacts[index].messages.length >=1">
                                     {{contacts[index].messages[contacts[index].messages.length-1].message}}
                                 </p>
                             </div>

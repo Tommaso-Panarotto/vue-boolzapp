@@ -48,6 +48,17 @@ footer a {
     flex-basis: 30%;
 }
 
+.bell,
+.input-group-text,
+#contacts {
+    background-color: white;
+}
+
+#my-avatar img,
+.input-group {
+    padding: 10px;
+}
+
 /*notify*/
 .notify {
     padding: 10px 0;
