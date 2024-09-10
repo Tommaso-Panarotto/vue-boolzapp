@@ -156,3 +156,18 @@ footer div {
     border-radius: 15px 15px 15px 0;
     background-color: white;
 }
+
+.flex-items-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-d-column {
+    display: flex;
+    flex-direction: column;
+}

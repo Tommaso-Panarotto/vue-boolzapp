@@ -24,16 +24,16 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <!--APP-->
-    <div id="app" class="d-flex align-items-center">
+    <div id="app" class="flex-items-center">
 
         <!--main-->
         <main class="d-flex">
 
             <!--SIDEBAR-->
-            <div id="sidebar" class="d-flex flex-column">
+            <div id="sidebar" class="flex-d-column">
 
                 <!--Header sidebar-->
-                <header class="d-flex justify-content-between ">
+                <header class="flex-between">
                     <!--my info-->
                     <div id="my-avatar">
                         <img src="img/avatar_io.png" alt="my avatar" class="p-2">
@@ -41,7 +41,7 @@
                     </div>
 
                     <!--my link-->
-                    <ul id="my-link" class="m-0 pe-3 d-flex align-items-center gap-3 fs-5">
+                    <ul id="my-link" class="m-0 pe-3 flex-items-center gap-3 fs-5">
                         <li><a href="#" class="fa-solid fa-circle-notch"></a></li>
                         <li><a href="#" class="fa-solid fa-message"></a></li>
                         <li><a href="#" class="fa-solid fa-ellipsis-vertical"></a></li>
@@ -50,7 +50,7 @@
 
                 <!--notify desktop-->
                 <div class="notify d-flex">
-                    <div class="bell bg-white rounded-circle d-flex justify-content-center align-items-center"><i
+                    <div class="bell bg-white rounded-circle flex-items-center justify-content-center"><i
                             class="fa-solid fa-bell-slash fs-3"></i></div>
                     <div class="ps-2">
                         <p class="fw-semibold">Ricevi notifiche di nuovi messaggi</p>
@@ -96,9 +96,9 @@
             <div id="main-content">
 
                 <!--header main content-->
-                <header class="d-flex justify-content-between ">
+                <header class="flex-between">
                     <!--chat info-->
-                    <div id="chat-avatar" class="d-flex align-items-center">
+                    <div id="chat-avatar" class="flex-items-center">
                         <img :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex].name" class="p-2">
                         <div><span>{{contacts[activeIndex].name}}</span>
                             <p v-if="contacts[activeIndex].messages.length >=1">ultimo messaggio inviato il
@@ -107,7 +107,7 @@
                     </div>
 
                     <!--my link-->
-                    <ul id="chat-link" class="m-0 pe-3 d-flex align-items-center gap-3 fs-5">
+                    <ul id="chat-link" class="m-0 pe-3 flex-items-center gap-3 fs-5">
                         <li><a href="#" class="fa-solid fa-magnifying-glass"></a></li>
                         <li><a href="#" class="fa-solid fa-paperclip"></a></li>
                         <li><a href="#" class="fa-solid fa-ellipsis-vertical"></a></li>
@@ -116,7 +116,7 @@
 
                 <!--active chat-->
                 <div id="chat" class="flex-grow-1 overflow-auto">
-                    <ul class="d-flex flex-column gap-3">
+                    <ul class="flex-d-column gap-3">
                         <li data-bs-toggle="dropdown" aria-expanded="false" :class="mex.status"
                             v-for="(mex,index) in contacts[activeIndex].messages" @click="mexIndex=index">
                             <div>
@@ -134,7 +134,7 @@
                 </div>
 
                 <!--footer-->
-                <footer class="d-flex align-items-center">
+                <footer class="flex-items-center">
                     <div class="emiticon"><a href="#" class="fa-regular fa-face-smile"></a></div>
                     <input type="text" placeholder="Scrivi un messaggio" class="m-3 p-2 flex-grow-1 border-0 rounded-2"
                         v-model="newTextSent" @keyup.enter="sendAMessage(newTextSent)">
