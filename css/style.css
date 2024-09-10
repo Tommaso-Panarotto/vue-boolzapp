@@ -146,13 +146,13 @@ footer div {
 }
 
 /*Utils*/
-.my-mex {
+.sent {
     border-radius: 15px 15px 0 15px;
     background-color: #D5F9BA;
     align-self: flex-end;
 }
 
-.contact-mex {
+.received {
     border-radius: 15px 15px 15px 0;
     background-color: white;
 }

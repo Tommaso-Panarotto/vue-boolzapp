@@ -117,8 +117,7 @@
                 <!--active chat-->
                 <div id="chat" class="flex-grow-1 overflow-auto">
                     <ul class="d-flex flex-column gap-3">
-                        <li data-bs-toggle="dropdown" aria-expanded="false"
-                            :class="(mex.status==='received')?'contact-mex':'my-mex'"
+                        <li data-bs-toggle="dropdown" aria-expanded="false" :class="mex.status"
                             v-for="(mex,index) in contacts[activeIndex].messages" @click="mexIndex=index">
                             <div>
                                 {{mex.message}}
